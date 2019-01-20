@@ -1,3 +1,6 @@
+- for study vue.js
+    - Push 〜 CircleCI 〜 deploy to Firebase
+
 # test-project
 
 > A Vue.js project
