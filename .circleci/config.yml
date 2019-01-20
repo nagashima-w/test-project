@@ -53,7 +53,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - dist/*
+            - dist
 
   deploy-job:
      docker:
@@ -62,7 +62,7 @@ jobs:
      steps:
        - checkout
        - attach_workspace: 
-          at: dist/*
+          at: dist
        - run:
            name: install firebase-tools
            command: npm install --save-dev firebase-tools
