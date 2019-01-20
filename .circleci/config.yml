@@ -67,6 +67,12 @@ jobs:
            name: install firebase-tools
            command: npm install --save-dev firebase-tools
        - run:
+           name: check working repo
+           command: pwd; ls -la
+       - run:
+           name: check dist/
+           command: ls -la dist/
+       - run:
            name: Deploy Master to Firebase
            command: ./node_modules/.bin/firebase deploy --project "$Firebase_Project" --token=$FIREBASE_DEPLOY_TOKEN
 
