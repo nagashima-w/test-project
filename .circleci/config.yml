@@ -71,8 +71,8 @@ jobs:
            name: check working repo
            command: pwd; ls -la
        - run:
-           name: check repo
-           command: ls -la
+           name: check build/
+           command: ls -la build/
        - run:
            name: Deploy Master to Firebase
            command: ./node_modules/.bin/firebase deploy --project "$Firebase_Project" --token=$FIREBASE_DEPLOY_TOKEN
