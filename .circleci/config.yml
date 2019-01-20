@@ -43,17 +43,17 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "./package.json" }}
         
-      # run tests!
-#      - run: pwd; ls -la; npm test
-      - run: npm test
+      - run: 
+           name: run tests
+           command: npm test
 
-#      # run build
-#      - run: npm run build
-
-#      - persist_to_workspace:
-#          root: .
-#          paths:
-#            - dist 
+      - run: 
+           name: node build
+           command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist/*
 
   deploy-job:
      docker:
@@ -61,9 +61,6 @@ jobs:
      working_directory: ~/test-project
      steps:
        - checkout
-       - run: 
-           name: build
-           command: npm run build
        - run:
            name: install firebase-tools
            command: npm install --save-dev firebase-tools
