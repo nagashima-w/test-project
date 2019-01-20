@@ -35,6 +35,9 @@ jobs:
            - v1-dependencies-
 
       - run: npm install
+        name: check working path
+        command: npm install
+
 
       - save_cache:
           paths:
@@ -45,12 +48,13 @@ jobs:
 #      - run: pwd; ls -la; npm test
       - run: npm test
 
-      # run build
-      - run: npm run build
-      - persist_to_workspace:
-          root: .
-          paths:
-            - dist 
+#      # run build
+#      - run: npm run build
+
+#      - persist_to_workspace:
+#          root: .
+#          paths:
+#            - dist 
 
   deploy-job:
      docker:
@@ -58,6 +62,9 @@ jobs:
      working_directory: ~/test-project
      steps:
        - checkout
+       - run: 
+           name: build
+           command: npm run build
        - run:
            name: install firebase-tools
            command: npm install --save-dev firebase-tools
