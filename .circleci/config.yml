@@ -61,6 +61,8 @@ jobs:
      working_directory: ~/test-project
      steps:
        - checkout
+       - attach_workspace: 
+          at: dist/*
        - run:
            name: install firebase-tools
            command: npm install --save-dev firebase-tools
