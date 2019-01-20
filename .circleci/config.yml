@@ -62,7 +62,7 @@ jobs:
      steps:
        - checkout
        - attach_workspace: 
-          at: dist
+          at: ./
        - run:
            name: install firebase-tools
            command: npm install --save-dev firebase-tools
