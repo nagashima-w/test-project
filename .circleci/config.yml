@@ -74,6 +74,9 @@ jobs:
            name: check build/
            command: ls -la build/
        - run:
+           name: check dist/
+           command: ls -la dist/
+       - run:
            name: Deploy Master to Firebase
            command: ./node_modules/.bin/firebase deploy --project "$Firebase_Project" --token=$FIREBASE_DEPLOY_TOKEN
 
