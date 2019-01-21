@@ -50,11 +50,10 @@ jobs:
       - run: 
            name: node build
            command: npm run build
-      - persist_to_workspace: # distとbuildを引き継ぐ
+      - persist_to_workspace: # distを引き継ぐ
           root: .
           paths:
             - dist
-#            - build
 
   deploy-job:
      docker:
@@ -62,7 +61,7 @@ jobs:
      working_directory: ~/test-project
      steps:
        - checkout
-       - attach_workspace: 
+       - attach_workspace:  #引き継いだdistをworking_directoryに配置
           at: ./
        - run:
            name: install firebase-tools
