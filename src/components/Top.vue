@@ -88,7 +88,7 @@ export default {
   name: 'top',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'This is test Pages for nagashi_ma_w'
     }
   }
 }
