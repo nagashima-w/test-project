@@ -1,3 +1,5 @@
+//とりあえずモック
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import Top from '@/components/Top'
