@@ -84,8 +84,25 @@
 </template>
 
 <script>
+
+// リンクをちゃんと設定したらコメントはずす
+//import Top from '@/components/Top'
+//import About from '@/components/About'
+//import Episode from '@/components/Episodes'
+//import Members from '@/components/Members'
+//import Twitter from '@/components/Twitter'
+//import Feedback from '@/components/Feedback'
+//import PageNotFound from '@/components/PageNotFound'
 export default {
-  name: 'top',
+//  name: 'top',
+//  components:{
+//    About: About,
+//    Episode: Episodes,
+//    Members: Members,
+//    Twitter: Twitter,
+//    Feedback: Feedback,
+//    PageNotFound: PageNotFound
+//  },
   data () {
     return {
       msg: 'This is test Pages for nagashi_ma_w'
