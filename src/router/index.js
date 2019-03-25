@@ -35,12 +35,12 @@ export default new Router({
       component: Members
     },
     {
-      path: `Twitter`,
+      path: `/Twitter`,
       name: 'Twitter',
       component: Twitter
     },
     {
-      path: 'Feedback',
+      path: '/Feedback',
       name: 'Feedback',
       component: Feedback
     },

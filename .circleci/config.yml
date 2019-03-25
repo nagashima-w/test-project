@@ -17,6 +17,7 @@ jobs:
 
     steps:
       - checkout
+# デバッグの残骸たち
 #      - run:
 #          name: check working path
 #          command: pwd
@@ -35,7 +36,7 @@ jobs:
            - v1-dependencies-
 
       - run: 
-           name: check working path
+           name: npm install
            command: npm install
 
       - save_cache:
